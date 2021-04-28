@@ -863,6 +863,10 @@ Resources:
     Properties:
       ServiceToken: !GetAtt CleanBucketFunction.Arn
       BucketName: !Ref LogsBucket
+    yaml:AWS::S3::Bucket:
+      Properties:
+        PublicAccessBlockConfiguration:
+          RestrictPublicBuckets: True
 
 Outputs:
   EC2PublicDNS:
