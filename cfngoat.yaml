@@ -867,6 +867,12 @@ Resources:
       Properties:
         PublicAccessBlockConfiguration:
           RestrictPublicBuckets: True
+    yaml:AWS::S3::Bucket:
+      Properties:
+        BucketEncryption:
+          ServerSideEncryptionConfiguration:
+            - ServerSideEncryptionByDefault:
+                SSEAlgorithm: AES256
 
 Outputs:
   EC2PublicDNS:
